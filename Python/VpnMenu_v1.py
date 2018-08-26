@@ -14,17 +14,16 @@ print ("\x1b[1;35m        |_|                                    ")
 print ("\x1b[1;37m[\x1b[1;35mVpnMenu v1\x1b[1;37m] Developed By \x1b[1;35mFlexingOnLamers \x1b[1;37m|| \x1b[1;35mCri")
 print ("\x1b[1;35mSelect An Option:")
 print ("\x1b[1;37m[\x1b[0;31m1\x1b[1;37m] ~~> Downloads all Needed Dependencies    ")
-print ("\x1b[1;37m[\x1b[1;32m2\x1b[1;37m] ~~> Downloads All Scripts                ")
-print ("\x1b[1;37m[\x1b[1;33m3\x1b[1;37m] ~~> Sets Up OpenVPN                      ")
-print ("\x1b[1;37m[\x1b[1;34m4\x1b[1;37m] ~~> Sets Up Softether                    ")
-print ("\x1b[1;37m[\x1b[1;35m5\x1b[1;37m] ~~> Adds Users to SoftEther              ")
-print ("\x1b[1;37m[\x1b[1;36m6\x1b[1;37m] ~~> Adds Users to OpenVPN                ")
+print ("\x1b[1;37m[\x1b[1;32m2\x1b[1;37m] ~~> Sets Up OpenVPN                      ")
+print ("\x1b[1;37m[\x1b[1;33m4\x1b[1;37m] ~~> Sets Up Softether                    ")
+print ("\x1b[1;37m[\x1b[1;34m5\x1b[1;37m] ~~> Adds Users to SoftEther              ")
+print ("\x1b[1;37m[\x1b[1;35m6\x1b[1;37m] ~~> Adds Users to OpenVPN                ")
 
-option = input ("\x1b[1;37m[\x1b[1;35mroot\x1b[1;37m@\x1b[1;35mVpnMenu\x1b[1;37m ~]#\x1b[1;35m ")
+choice = raw_input("\x1b[1;37m[\x1b[1;35mroot\x1b[1;37m@\x1b[1;35mVpnMenu\x1b[1;37m ~]#\x1b[1;35m ")
 
-if option == 1:
-  OS = raw_input("\x1b[1;36mDebian \x1b[1;37mor \x1b[0;31mCentOS\x1b[1;37m:\x1b[1;35m")
-if OS == "Debian":
+if choice == '1':
+  nem = raw_input("\x1b[1;36mDebian \x1b[1;37mor \x1b[0;31mCentOS\x1b[1;37m:\x1b[1;35m")
+if nem == 'Debian':
  cri("apt-get update && upgrade -y")
  cri("apt-get install lsof git -y")
  cri("apt-get install gcc dstat iftop screen scapy iptraf-ng -y")
@@ -33,8 +32,11 @@ if OS == "Debian":
  cri("apt-get install php5 php-pear php5-mysql -y")
  cri("apt-get install tcpdump nmap -y")
  cri("apt-get install scapy -y")
- cri("python VpnMenu.py")
-elif OS == "CentOS":
+ cri("wget https://git.io/vpn -O openvpn-install.sh")
+ cri("wget -q https://pastebin.com/raw/v3StmF23 -O softether.py")
+ cri("wget -q https://pastebin.com/raw/BhuTQYnn -O softetheradd.py")
+ cri("python VPN_Menu.py")
+elif nem == 'CentOS':
  cri("yum update -y")
  cri("yum install python-paramiko gcc screen nano wget httpd iptables perl -y")
  cri("yum install gcc cmake gmp gmp-devel libpcap-devel gengetopt byacc flex -y")
@@ -42,16 +44,22 @@ elif OS == "CentOS":
  cri("yum install epel-release -y")
  cri("yum install gengetopt -y")
  cri("yum install lsof dstat iftop iptraf-ng git -y")
- cri("python VpnMenu.py")
-if option == 2:
  cri("wget https://git.io/vpn -O openvpn-install.sh")
- cri("wget -q https://pastebin.com/raw/v3StmF23 -O softether.py")
- cri("wget -q https://pastebin.com/raw/BhuTQYnn -O softetheradd.py")
-if option == 3:
+ cri("wget https://pastebin.com/raw/v3StmF23 -O softether.py")
+ cri("wget https://pastebin.com/raw/BhuTQYnn -O softetheradd.py")
+ cri("python VPN_Menu.py")
+
+if choice == '2':
+
 	cri("bash openvpn-install.sh")
-if option == 4:
+
+if choice == '3':
+
 	cri("python softether.py")
-if option == 5:
+
+if choice == '4':
+
 	cri("python softetheradd.py")
-if option == 6:
+
+if choice == '5':
 	cri("bash openvpn-install.sh")
